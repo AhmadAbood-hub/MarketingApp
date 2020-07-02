@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.Activites.CreateNewUserActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="#45BF4B"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:cardCornerRadius="5dp"
+                android:layout_margin="5dp"
+                android:padding="@dimen/Welcome">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        style="@style/AppTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email Info"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/createNewUserUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/colorPrimary">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="UserName"
+                            android:inputType="textEmailAddress"
+                            android:padding="@dimen/Username"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/LoginBtn" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/createNewUserEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/HelloText"
+
+
+                        android:textColor="@color/colorPrimary">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:hint="Email"
+                            android:inputType="textEmailAddress"
+                            android:padding="@dimen/Username"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/LoginBtn" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/createNewUserPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/HelloText"
+
+                        android:textColor="@color/colorPrimary">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:hint="Password"
+                            android:inputType="textEmailAddress"
+                            android:padding="@dimen/Username"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/LoginBtn" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="5dp"
+
+                android:orientation="vertical"
+                android:padding="@dimen/Welcome">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        style="@style/AppTheme"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="User Info"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/createNewUserFirstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/colorPrimary">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:hint="FirstName"
+                            android:inputType="textEmailAddress"
+                            android:padding="@dimen/Username"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/LoginBtn" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/createNewUserLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_below="@+id/HelloText"
+
+                        android:textColor="@color/colorPrimary">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:hint="LastName"
+                            android:inputType="textEmailAddress"
+                            android:padding="@dimen/Username"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/LoginBtn" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/createNewUserPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/HelloText"
+
+                        android:textColor="@color/colorPrimary">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:hint="Phone"
+                            android:inputType="textEmailAddress"
+                            android:padding="@dimen/Username"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/LoginBtn" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                app:cardCornerRadius="5dp"
+
+                android:padding="@dimen/Welcome"
+                >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        style="@style/AppTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Location Info"
+                        android:textColor="@color/colorPrimary" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/createNewUserPrefecture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/colorPrimary">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:hint="Prefecture"
+                            android:inputType="textEmailAddress"
+                            android:padding="@dimen/Username"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/LoginBtn" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/createNewUserCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_below="@+id/HelloText"
+
+                        android:textColor="@color/colorPrimary">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:hint="Country"
+                            android:inputType="textEmailAddress"
+                            android:padding="@dimen/Username"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/LoginBtn" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/createNewUserPostcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/HelloText"
+
+                        android:textColor="@color/colorPrimary">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:hint="Postcode"
+                            android:inputType="textEmailAddress"
+                            android:padding="@dimen/Username"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/LoginBtn" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/createNewUserCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:textColor="@color/colorPrimary">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:hint="City"
+                            android:inputType="textEmailAddress"
+                            android:padding="@dimen/Username"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/LoginBtn" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/createNewUsereNumBuilding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/HelloText"
+
+
+                        android:textColor="@color/colorPrimary">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:hint="NumBuilding"
+                            android:inputType="textEmailAddress"
+                            android:padding="@dimen/Username"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/LoginBtn" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/createNewUsereNumStreet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/HelloText"
+
+                        android:textColor="@color/colorPrimary">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="NumStreet"
+                            android:inputType="textEmailAddress"
+                            android:padding="@dimen/Username"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/LoginBtn" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+            <Button
+                android:id="@+id/btnLogin"
+                style="@style/AppTheme"
+                android:layout_width="@dimen/WidthInputs"
+                android:layout_height="@dimen/HeightInputs"
+                android:layout_marginTop="@dimen/MargintTopForBtn"
+                android:background="@drawable/style_btn_create"
+                android:text="Login"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/LoginBtn" />
+
+
+
+
+            <LinearLayout
+                android:id="@+id/txtDontHaveAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/BetweenBtnAndDont"
+                android:gravity="center">
+
+
+                <TextView
+                    android:id="@+id/HaveAccount"
+                    style="@style/AppTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="Already have an account? "
+                    android:textSize="@dimen/LoginBtn" />
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

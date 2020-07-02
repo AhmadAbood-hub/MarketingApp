@@ -1,8 +1,11 @@
 package com.example.marketingapp.view.Fragments;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,9 +30,9 @@ public class ProductFragment extends Fragment {
     private RecyclerView.LayoutManager layoutManager;
     private ProductAdapter productAdapter;
     private List<Product> products;
-    
-    
-    
+    private FragmentActivity myContext;
+
+
     public ProductFragment() {
         // Required empty public constructor
     }
@@ -49,10 +52,13 @@ public class ProductFragment extends Fragment {
 
         recFrgProductAllProduct = (RecyclerView) view.findViewById(R.id.recFrgProductAllProduct);
         recFrgProductAllProduct.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false);
+        layoutManager = new LinearLayoutManager(getContext(), RecyclerView.VERTICAL, false);
         recFrgProductAllProduct.setLayoutManager(layoutManager);
         products = new ArrayList<>();
-        productAdapter = new ProductAdapter(getContext(), products);
+        productAdapter = new ProductAdapter(getContext(), products, ProductFragment.this);
+
+
+
 
         products.add(new Product("Product"));
         products.add(new Product("Product"));
@@ -60,24 +66,25 @@ public class ProductFragment extends Fragment {
         products.add(new Product("Product"));
         products.add(new Product("Product"));
         products.add(new Product("Product"));
-        products.add(new Product("Product"));
-        products.add(new Product("Product"));
-        products.add(new Product("Product"));
-        products.add(new Product("Product"));
-        products.add(new Product("Product"));
-        products.add(new Product("Product"));
-        products.add(new Product("Product"));
-        products.add(new Product("Product"));
-        products.add(new Product("Product"));
-        products.add(new Product("Product"));
-        products.add(new Product("Product"));
-        products.add(new Product("Product"));
-
 
         recFrgProductAllProduct.setAdapter(productAdapter);
 
 
-
         return view;
     }
+
+    @Override
+    public void onAttach(Activity activity) {
+        myContext = (FragmentActivity) activity;
+        super.onAttach(activity);
+    }
+
+
+    public void changeFragment(Fragment fragment) {
+        FragmentManager fragManager = myContext.getSupportFragmentManager();
+
+        fragManager.beginTransaction().replace(R.id.frmDepartmentProduct, fragment).commit();
+    }
+
+
 }

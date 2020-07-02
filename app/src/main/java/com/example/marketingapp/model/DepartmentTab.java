@@ -5,12 +5,12 @@ import com.example.marketingapp.R;
 public class DepartmentTab {
     String name;
     Boolean click;
-    int color;
+
 
     public DepartmentTab(String name) {
         this.name = name;
         click = false;
-        color = R.color.colorAccent;
+
     }
 
     public String getName() {
@@ -29,11 +29,5 @@ public class DepartmentTab {
         this.click = click;
     }
 
-    public int getColor() {
-        return color;
-    }
 
-    public void setColor(int color) {
-        this.color = color;
-    }
 }

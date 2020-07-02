@@ -2,6 +2,7 @@ package com.example.marketingapp.view.Activites;
 
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -122,6 +123,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         int id = menuItem.getItemId();
 
+        if (id == R.id.nav_login) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            this.startActivity(intent);
+        }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

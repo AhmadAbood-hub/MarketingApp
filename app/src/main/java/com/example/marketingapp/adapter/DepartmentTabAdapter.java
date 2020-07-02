@@ -25,7 +25,7 @@ public class DepartmentTabAdapter extends RecyclerView.Adapter<ViewHolderDepartm
     private Context context;
     private List<DepartmentTab> departmentTabs;
     private Fragment fragment;
-
+    private Boolean a = false;
 
     public DepartmentTabAdapter(Context context, List<DepartmentTab> departmentTabs, Fragment fragment) {
         this.context = context;
@@ -59,7 +59,7 @@ public class DepartmentTabAdapter extends RecyclerView.Adapter<ViewHolderDepartm
             @Override
             public void onClick(View view) {
 
-
+                a = true;
                 for (int i = 0; i < departmentTabs.size(); i++) {
                     departmentTabs.get(i).setClick(false);
                 }
@@ -75,8 +75,12 @@ public class DepartmentTabAdapter extends RecyclerView.Adapter<ViewHolderDepartm
 
         Log.i(TAG, "onClick: " + departmentTabs.size());
 
-        viewHolderDepartmentTab.getTxtNameDepartmentTab().setBackgroundResource(click ? R.color.colorPrimary : R.color.colorAccent);
+        viewHolderDepartmentTab.getTxtNameDepartmentTab().setBackgroundResource(click ? R.color.colorPrimary : R.color.colorWhite);
 
+
+        if (position == 0 && !a) {
+            viewHolderDepartmentTab.getTxtNameDepartmentTab().setBackgroundResource(R.color.colorPrimary);
+        }
     }
 
     @Override

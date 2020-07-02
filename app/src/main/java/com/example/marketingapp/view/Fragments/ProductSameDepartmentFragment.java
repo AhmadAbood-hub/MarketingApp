@@ -59,7 +59,6 @@ public class ProductSameDepartmentFragment extends Fragment {
     private static int wait = 5000;
 
 
-
     public ProductSameDepartmentFragment() {
         // Required empty public constructor
     }
@@ -104,7 +103,6 @@ public class ProductSameDepartmentFragment extends Fragment {
 
 
         recProductSameDepartment.setAdapter(productSameDepartmentAdapter);
-
 
 
         allProdSameDep = view.findViewById(R.id.allProdSameDep);
@@ -152,23 +150,16 @@ public class ProductSameDepartmentFragment extends Fragment {
         indicator_product_same_department.setupWithViewPager(slider_pager_product_same_department, true);
 
 
-
-
-
-
-
-
-
         return view;
     }
+
     @Override
     public void onAttach(Activity activity) {
-        myContext=(FragmentActivity) activity;
+        myContext = (FragmentActivity) activity;
         super.onAttach(activity);
     }
 
-    public void changeFragment(Fragment fragment)
-    {
+    public void changeFragment(Fragment fragment) {
         FragmentManager fragManager = myContext.getSupportFragmentManager();
 
         fragManager.beginTransaction().replace(R.id.frmDepartmentProduct, fragment).commit();

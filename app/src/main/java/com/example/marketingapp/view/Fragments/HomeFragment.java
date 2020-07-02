@@ -71,7 +71,8 @@ public class HomeFragment extends Fragment {
         recDepartmentTab.setLayoutManager(layoutManagerDepartmentTab);
         departmentTabs = new ArrayList<>();
 
-        departmentTabs.add(new DepartmentTab("News"));
+        departmentTabs.add(new DepartmentTab("Main"));
+
         departmentTabs.add(new DepartmentTab("Foods"));
         departmentTabs.add(new DepartmentTab("Males"));
         departmentTabs.add(new DepartmentTab("Sports"));

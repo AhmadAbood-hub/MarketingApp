@@ -1,8 +1,11 @@
 package com.example.marketingapp.view.Fragments;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
@@ -44,6 +47,7 @@ public class DepartmentFragment extends Fragment {
 
     public TabLayout indicator;
 
+    private FragmentActivity myContext;
 
     Timer timer = new Timer();
     Handler updateSlide = new Handler();
@@ -76,7 +80,7 @@ public class DepartmentFragment extends Fragment {
         layoutManager = new GridLayoutManager(getContext(), 3);
         recDepartment.setLayoutManager(layoutManager);
         departments = new ArrayList<>();
-        departmentAdapter = new DepartmentAdapter(getContext(), departments, new DepartmentFragment());
+        departmentAdapter = new DepartmentAdapter(getContext(), departments,  DepartmentFragment.this);
 
         departments.add(new Department("Department"));
         departments.add(new Department("Department"));
@@ -149,4 +153,19 @@ public class DepartmentFragment extends Fragment {
 
         return view;
     }
+
+    @Override
+    public void onAttach(Activity activity) {
+        myContext = (FragmentActivity) activity;
+        super.onAttach(activity);
+    }
+
+
+
+    public void changeFragment(Fragment fragment) {
+        FragmentManager fragManager = myContext.getSupportFragmentManager();
+
+        fragManager.beginTransaction().replace(R.id.frmDepartmentProduct, fragment).commit();
+    }
+
 }

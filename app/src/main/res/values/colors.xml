@@ -7,7 +7,19 @@
 
     <color name="black">#000</color>
 
-    <color name="colorAccent">#fff</color>
+
+    <color name="colorWhite">#FFF</color>
+
+    <color name="colorAccent">#FF169C25</color>
+
+    <color name="colorStart">#FF095712</color>
+
+
+    <color name="colorCenter">#FF169C25</color>
+
+
+
+    <color name="colorEnd">#FF5ED67E</color>
 
     <color name="asa">#F0F0F0</color>
 </resources>

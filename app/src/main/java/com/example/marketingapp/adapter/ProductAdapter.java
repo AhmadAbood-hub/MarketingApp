@@ -8,13 +8,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.marketingapp.R;
-import com.example.marketingapp.model.Department;
 import com.example.marketingapp.model.Product;
-import com.example.marketingapp.view.Activites.DetailsProductActivity;
-import com.example.marketingapp.viewHolder.ViewHolderDepartment;
+import com.example.marketingapp.view.Fragments.DetailsProductFragment;
+import com.example.marketingapp.view.Fragments.ProductFragment;
+import com.example.marketingapp.view.Fragments.ProductSameDepartmentFragment;
 import com.example.marketingapp.viewHolder.ViewHolderProduct;
 
 import java.util.List;
@@ -22,11 +23,14 @@ import java.util.List;
 public class ProductAdapter extends RecyclerView.Adapter<ViewHolderProduct> {
     private Context context;
     private List<Product> products;
+    private Fragment fragment;
 
 
-    public ProductAdapter(Context context, List<Product> products) {
+    public ProductAdapter(Context context, List<Product> products,Fragment fragment) {
         this.context = context;
         this.products = products;
+        this.fragment = fragment;
+
     }
 
 
@@ -49,8 +53,9 @@ public class ProductAdapter extends RecyclerView.Adapter<ViewHolderProduct> {
         viewHolderProduct.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, DetailsProductActivity.class);
-                context.startActivity(intent);
+
+                ((ProductFragment) fragment).changeFragment(new DetailsProductFragment());
+
             }
         });
 

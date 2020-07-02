@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.marketingapp.R;
 import com.example.marketingapp.model.Department;
 import com.example.marketingapp.model.Product;
+import com.example.marketingapp.view.Fragments.DetailsProductFragment;
 import com.example.marketingapp.view.Fragments.HomeFragment;
 import com.example.marketingapp.view.Fragments.ProductFragment;
 import com.example.marketingapp.view.Fragments.ProductSameDepartmentFragment;
@@ -55,7 +56,9 @@ public class ProductSameDepartmentAdapter extends RecyclerView.Adapter<ViewHolde
         viewHolderProductSameDepartment.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((ProductSameDepartmentFragment) fragment).changeFragment(new ProductFragment());
+
+                ((ProductSameDepartmentFragment)fragment).changeFragment(new DetailsProductFragment());
+
             }
         });
 
